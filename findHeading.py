@@ -15,7 +15,6 @@ baseRequest = requests.get(url, headers=baseHeader)
 statusCode = baseRequest.status_code
 
 if statusCode == 200:
-    baseRequest = requests.get(url, headers=baseHeader) # Get the name of the document
     htmlContents = baseRequest.text
     bs = BeautifulSoup(htmlContents, 'html.parser')
     docName = bs.select('h1')[0].text.strip()
