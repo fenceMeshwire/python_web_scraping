@@ -3,7 +3,6 @@
 # baseHeader.py
 
 # Purpose: Change the HTML header to look like a regular request.
-# Concept has been looked up in Practical Web Scraping for Data Science (Apress), Seppe vanden Broucke, s. page 101.
 
 # Dependency
 import requests
