@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# checkHyperlinks.py
+# check_hyperlinks.py
 
 # Purpose: Checking hyperlinks on a website for availability
 
