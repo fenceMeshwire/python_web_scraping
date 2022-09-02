@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# findHeading.py
+# find_heading.py
 
 # Purpose: Find the <h1>heading</h1> in a given website and transform it into a string.
 
