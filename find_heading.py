@@ -8,18 +8,19 @@
 from bs4 import BeautifulSoup
 import requests
 
-url = 'http://webscrapingfordatascience.com/'
-baseHeader = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
+url = 'https://www.python.org//'
+base_header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
 
-baseRequest = requests.get(url, headers=baseHeader)
-statusCode = baseRequest.status_code
+base_requests = requests.get(url, headers=base_header)
+status_code = base_requests.status_code
 
-if statusCode == 200:
-    htmlContents = baseRequest.text
+if status_code == 200:
+    htmlContents = base_requests.text
     bs = BeautifulSoup(htmlContents, 'html.parser')
-    docName = bs.select('h1')[0].text.strip()
+    doc_name = bs.select('h1')[0].text.strip()
 else:
+    doc_name = None
     print('Cannot get information, please check HTML status code.')
 
 # Result
-print('HEADING:', docName)
+print('HEADING:', doc_name)
