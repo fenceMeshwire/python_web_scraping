@@ -9,7 +9,7 @@ import requests
 from selenium import webdriver
 
 driver = webdriver.Firefox()
-url = 'http://webscrapingfordatascience.com'
+url = 'https://www.python.org'
 driver.get(url)
 
 driver.implicitly_wait(3)
