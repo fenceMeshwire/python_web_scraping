@@ -68,6 +68,9 @@ pf_qty = pd.read_csv('portfolio_qty_cur_price.csv', sep=";")
 pf = pf.drop('price', axis=1)
 df = pf.merge(pf_qty, on='name', how='left')
 
+ttl = df['total'].sum()
+df['per'] = df['total'].div(ttl).round(4)
+
 df.to_csv('portfolio_summary.csv', sep=';', encoding='utf8', columns=list(df.columns), index=False, header=True)
 # ____________________________________________________________________________________________________
 
